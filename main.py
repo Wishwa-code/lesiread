@@ -20,6 +20,7 @@ import argparse
 import logging
 import boto3
 from botocore.exceptions import ClientError
+from botocore.config import Config
 import requests
 from PyPDF2 import PdfReader
 from flask_jwt_extended import JWTManager, create_access_token
