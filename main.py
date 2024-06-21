@@ -53,7 +53,15 @@ region='eu-north-1'
 s3_client = boto3.client(
     's3',
     aws_access_key_id=AWS_ACCESS_KEY_ID,
-    aws_secret_access_key=AWS_SECRET_ACCESS_KEY
+    aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
+    region_name=region,
+    config=Config(
+        signature_version='s3v4',     # Explicitly set Signature Version 4
+        s3={'addressing_style': 'virtual'}, # Required for newer regions
+        retries={'max_attempts': 3},     # Retry failed requests up to 3 times
+        connect_timeout=5,             # Timeout for initial connection (5 seconds)
+        read_timeout=10                 # Timeout for reading response (10 seconds)
+    )
 )
 
 # List all buckets (modify if you only need the specific bucket name)
