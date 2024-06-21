@@ -27,6 +27,8 @@ from flask_jwt_extended import JWTManager, create_access_token
 from bson.objectid import ObjectId  # Import ObjectId
 from bson.json_util import dumps 
 from pymongo.errors import PyMongoError
+import tempfile
+import pdfplumber
 import sys
 print(sys.path)
 import os
@@ -327,6 +329,16 @@ def upload_document():
             # Generate presigned URL for immediate access
             presigned_url = generate_presigned_url(s3_client, 'get_object', {"Bucket": BUCKET_NAME, "Key": filename}, 3600)
             print(presigned_url)
+
+            # 2. Download from S3 and process with pdfplumber (NEW)
+            global current_viewed_pdf
+
+            with tempfile.NamedTemporaryFile(delete=False) as temp_pdf:
+                s3_client.download_fileobj(BUCKET_NAME, filename, temp_pdf)
+
+                current_viewed_pdf = temp_pdf.name
+
+                print(current_viewed_pdf)
 
             # Store information in MongoDB (including the presigned URL)
             collection = db["docs"]
