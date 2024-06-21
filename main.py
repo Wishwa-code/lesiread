@@ -45,9 +45,9 @@ logger = logging.getLogger(__name__)
 
 
 # Replace with your AWS credentials from environment variables
-AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_ACCESS_KEY_ID = "AWS_ACCESS_KEY_ID eka methana"
 
-AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_SECRET_ACCESS_KEY = "AWS_SECRET_ACCESS_KEY_ eka methana"
 
 BUCKET_NAME = 'pdfnew2'  # Replace with your S3 bucket name
 region='eu-north-1'
