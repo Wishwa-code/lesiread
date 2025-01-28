@@ -1,0 +1,131 @@
+.login-container {
+    background-color: white;
+    margin          : auto;
+    text-align      : center;
+    padding-top     : 150px;
+}
+
+.heading h1 {
+    color        : aliceblue;
+    margin-bottom: 50px;
+}
+
+.logo {
+    text-align: center;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.384);
+    border-radius: 10px; /* Adjust the radius as needed */
+  }
+  
+  
+
+.logo img {
+    width        : 100%;
+    max-width    : 200px;
+    border-radius: 50px;
+}
+
+.centered-form {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    margin-top    : 30px;
+    
+}
+
+.form-container {
+    width    : 100%;
+    max-width: 300px;
+}
+
+#floatingInput,
+#floatingPassword {
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.button-container {
+    display       : flex;
+    flex-direction: column;
+    margin-top    : 20px;
+}
+
+.button-container h3 {
+    color: aliceblue;
+}
+
+.button {
+    margin-left : auto;
+    margin-right: auto;
+}
+
+.signup {
+    display    : flex;
+    align-items: center;
+    margin-top : 100px;
+}
+
+.signup h6 {
+    color             : rgb(253, 253, 253);
+    padding-inline-end: 100px;
+    padding-inline-start: 100px;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .login-container {
+        padding-top: 100px;
+    }
+
+    .form-container {
+        max-width: 400px;
+    }
+
+    .button-container {
+        flex-direction : row;
+        justify-content: center;
+        margin-top     : 40px;
+    }
+
+    .button {
+        margin-left: 275px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .login-container {
+        padding-top: 80px;
+    }
+
+
+    .signup h6 {
+        color             : rgb(253, 253, 253);
+        padding: auto;
+    }
+}
+
+
+  .inputnew-container {
+    position: relative; /* Necessary for positioning the label */
+  }
+  
+  input {
+    padding: 15px; /* Adjust padding to accommodate the label */
+  }
+  
+  label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%); /* Center the label */
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    top: 10px; /* Adjust the top position when the input is focused or has content */
+    font-size: 12px; /* Optional: Make the label smaller when floating */
+    color: #6B7280;
+    left: 15px; /* Optional: Change label color when floating */
+  }

@@ -1,0 +1,318 @@
+.landing-light-container {
+  padding: 0px 100px 0px 100px;
+}
+
+.img-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.landing-light-wrapper  img {
+  max-width: 50px;
+  width: 100%;
+}
+
+
+.dropdown-toggle{
+    font-size: 17px;
+    display: none;
+}
+
+.menu-wrapper{
+    display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   margin-top: 20px;
+   margin-bottom: 40px;
+   gap: 30px;
+}
+
+.menus {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu {
+  font-weight: bold;
+  font-size: 17px;
+  color: rgb(53, 49, 49);
+}
+
+
+.css-5lbw0b-MuiTypography-root{
+  padding-top: 2rem;
+}
+
+/*##################### PAYMENT INFO ############################*/
+
+
+.info-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px 0px 0px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.desc {
+  color: rgb(173, 173, 173);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.info-title-wrapper img {
+  max-width: 200px;
+  width: 100%;
+}
+
+.form-and-card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-and-card-wrapper img {
+  max-width: 400px;
+}
+
+
+.form-and-card-wrapper .form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 570px;
+  width: 100%;
+}
+
+.form-and-card-wrapper .form-wrapper .input-wrapper {
+  margin-bottom: 30px;
+}
+
+.form-and-card-wrapper .form-wrapper .input {
+  height: 35px;
+  margin: 10px 20px 0px 0px;
+  background-color: rgb(236, 230, 230);
+  border: 1px solid lightgrey;
+  width: 240px;
+  outline: none;
+  left: 10px;
+  display: block;
+  padding-left: 10px;
+}
+
+.form-and-card-wrapper .form-wrapper .input::placeholder{
+  color: black;
+  
+}
+
+.radio-btn {
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+form button {
+  background-color: #0069d9;
+  color: white;
+  border: none;
+  width: 93%;
+  height: 50px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+
+/*##################### SUMMARY ############################*/
+
+.summary {
+  padding: 0px 40px 0px 0px;
+}
+
+.summaryItemText {
+  font-weight: bold;
+}
+
+.summary .summaryTitle {
+  font-weight: 200;
+  font-size: 24px;
+}
+
+.summary .summaryItem {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.promo-code {
+    color: rgb(173, 173, 173);
+}
+
+.summaryItemTotal {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.summaryItemTotal button {
+  background-color: #0069d9;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.summaryItemTotalText {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+
+/*##################### MEDIA QUERIES ############################*/
+
+@media (max-width: 850px) {
+
+    .landing-light-container{
+        padding: 25px;
+    }
+
+    .dropdown-toggle{
+        font-size: 17px;
+        display:block;
+    }
+
+   .menus{
+       display: none;
+   }
+
+   .menu{
+       font-size: 13px;
+   }
+
+   .mobile-menus{
+    background-color: white;
+    box-shadow: .02rem .02rem .4rem .05rem gray;
+    position: fixed;
+    display: flex;
+    z-index:4 ;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+    transition: all 2s, ease;
+    justify-content: center;
+    align-items: center;
+   padding: 20px;
+   margin-top: 170px;
+   }
+
+
+   .info-title-wrapper{
+       align-items: center;
+       justify-content: center;
+       padding: unset;
+
+   }
+
+   .title-wrapper{
+       margin-bottom: 20px;
+   }
+
+   .form-and-card-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .form-and-card-wrapper img {
+    max-width: 400px;
+  }
+  
+  
+  .form-and-card-wrapper .form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .form-and-card-wrapper .form-wrapper .input-wrapper {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  
+  .form-and-card-wrapper .form-wrapper .input {
+    height: 35px;
+    margin: 10px 20px 0px 0px;
+    background-color: rgb(236, 230, 230);
+    border: 1px solid lightgrey;
+    width: 98%;
+    outline: none;
+    
+  }
+
+  form button{
+    width: 100%;
+  }
+
+  .summary{
+      padding: unset;
+  }
+
+  
+
+  .promo-code {
+    color: rgb(173, 173, 173);
+    font-size: 10px;
+}
+
+
+.summaryItemTotal {
+    margin: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    font-size: 15px;
+    align-items: center;
+    flex-flow: column-reverse;
+  }
+  
+  .summaryItemTotal button {
+    background-color: #0069d9;
+    color: white;
+    border: none;
+    width: 240px;
+    font-size: 17px;
+    cursor: pointer;
+    padding: unset;
+    height: 50px;
+    margin-top: 20px;
+  }
+  
+  .summaryItemTotalText {
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 10px;
+  }
+}
+
+
+@media (max-width: 330px){
+    .radio-container{
+        font-size: 15px;
+    }
+}

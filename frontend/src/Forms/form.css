@@ -1,0 +1,191 @@
+/* General Styling */
+.sub-container {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sub-container{
+  margin-right: 0%;
+  margin-bottom: 20px;
+
+}
+.wholepdfview{
+  margin-right: 20%;
+}
+.button2 {
+  margin-top: 1%;
+  margin-right: 1%;
+}
+
+.button3 {
+  margin-top: 1%;
+}
+
+/* For TextLayer styles */
+@import '~react-pdf/dist/esm/Page/AnnotationLayer.css';
+@import '~react-pdf/dist/esm/Page/TextLayer.css';
+
+/* PDF Document Styling */
+.react-pdf__Document {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* PDF Page Styling */
+.react-pdf__Page {
+  margin: 0 auto;
+}
+
+.custom-width {
+  width: 65%;
+}
+
+/* Textarea Styling */
+#userInput {
+  text-align: center;
+}
+
+/* Text Highlighting */
+::selection {
+  background-color: #d4ffb78e;
+}
+
+/* Notes Button Styling */
+.notes-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Notes Panel Styling */
+.notes-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #007bff; /* Updated to match document colors */
+  color: #fff; /* Text color */
+  font-family: 'Arial', sans-serif; /* Adjust font family as needed */
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.notes-panel textarea {
+  width: 100%;
+  height: calc(100% - 20px);
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  resize: none;
+  outline: none;
+  background-color: #00395a; /* Match background color */
+  color: #fff; /* Text color */
+  font-family: 'Arial', sans-serif; /* Adjust font family as needed */
+}
+
+/* Notes Button Hover and Focus Styling */
+.notes-button:hover,
+.notes-button:focus {
+  background-color: #0056b3;
+  color: #fff;
+}
+.allbuttons button{
+  background-color: #007bff; /* Updated to match document colors */
+  border: none;
+  color: white;
+}
+/* Close Button Styling for Notes Panel */
+.notes-panel-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff; /* Text color */
+}
+
+/* Hide Buttons Styling */
+.hidebuttons {
+  margin-right: 0%;
+  
+}
+
+/* Additional Styling */
+#pdfCanvas {
+  border: 1px solid #000;
+}
+
+
+/* styles.css or form.css */
+.quiz-container {
+  background-color: #000744; /* Set background color */
+  padding: 20px; /* Add padding for better spacing */
+  border-radius: 10px; /* Add border-radius for rounded corners */
+  margin-top: 20px; /* Adjust margin for separation */
+  /* Add any other styling you need */
+}
+
+
+.language-select {
+  font-size: 16px !important;
+  padding: 8px 12px !important;
+  border: 1px solid #00308a !important;
+  border-radius: 4px !important;
+  outline: none !important;
+  appearance: none !important;
+  background-color: #00308a !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s !important;
+}
+
+.placeholder-color{
+  background-color: #001131 !important;
+  color: #ffffff !important;
+}
+
+.placeholder-color::placeholder {
+  color: white !important;
+  opacity: 1; /* Firefox */
+}
+
+.text-container {
+  width: 250px; /* Set your desired width */
+  border: 1px solid black; 
+  padding: 10px;
+  overflow: auto; /* or hidden */ 
+}
+.pdf-container{
+  height: 600px;
+  width: 100%;
+  padding-bottom: 75px;
+}
+
+.file-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.list-group-item {
+  word-break: break-word;
+}
+
+.list-group-item .btn {
+  align-self: flex-center;
+}
